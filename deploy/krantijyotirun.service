@@ -1,0 +1,17 @@
+[Unit]
+Description=Krantijyoti Women’s Run website
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/krantijyotirun
+Environment=NODE_ENV=production
+Environment=PORT=5041
+ExecStart=/usr/bin/node /var/www/krantijyotirun/node_modules/next/dist/bin/next start --hostname 127.0.0.1 --port 5041
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

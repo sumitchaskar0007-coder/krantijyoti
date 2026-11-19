@@ -22,4 +22,6 @@ npm start
 
 The production build is written to `dist/` and is included in this repository as requested. It is a Next.js server build, not a standalone static website; deploy it with the project dependencies and a Node.js server. The API routes use the database configured through `DATABASE_URL`.
 
+VPS service and Nginx configuration are in [`deploy/`](deploy/README.md).
+
 The registration buttons link to the official [Krantijyoti Women’s Run 2027 registration page](https://registrations.indiarunning.com/kranti_jyoti_womens_run_2027_59904).
