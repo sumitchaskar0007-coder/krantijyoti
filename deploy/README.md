@@ -2,7 +2,7 @@
 
 The site runs as a Next.js service on port `5041`, behind Nginx. The systemd unit runs as `www-data` from `/var/www/krantijyotirun`.
 
-Copy `krantijyotirun.service` to `/etc/systemd/system/`, enable and start it with systemd, then link `nginx-krantijotirun.conf` into `/etc/nginx/sites-enabled/` and reload Nginx after `nginx -t` succeeds.
+Copy `krantijyotirun.service` to `/etc/systemd/system/`, enable and start it with systemd, then link `nginx-krantijotirun.conf` into `/etc/nginx/sites-enabled/` and reload Nginx after `nginx -t` succeeds. The Nginx configuration redirects HTTP to HTTPS and expects a Certbot certificate at `/etc/letsencrypt/live/krantijyotirun.org/`.
 
 ## Domain DNS
 
